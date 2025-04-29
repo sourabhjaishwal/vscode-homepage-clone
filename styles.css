@@ -125,6 +125,7 @@ nav button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero-section h1 span {
@@ -134,34 +135,89 @@ nav button:hover {
     font-size: 4.5rem;
 }
 
-.hero-section .buttons .download {
-    background-color: #0078d4;
-    border-radius: 5px;
-    border: none;
+.hero-section .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* optional: replaces margin between buttons */
+    margin-top: 1.2rem;
+}
+
+.hero-section .buttons .download,
+.hero-section .buttons .try-agent-mode {
     padding: 0.8rem 1.5rem;
     font-size: 1.1rem;
-    margin: 1.2rem 0.2rem 0.5rem 0.2rem;
-    color: #fff;
     font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .buttons .download {
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
 }
 
 .hero-section .buttons .download:hover {
     background-color: #00589b;
-    cursor: pointer;
 }
 
 .hero-section .buttons .try-agent-mode {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
-    border: 0.5px solid #9ba3b4;
-    background-color: #25292E;
+    background-color: #25292e;
     color: #c3d0e5;
-    font-weight: 500;
-    border-radius: 5px;
-    margin: 1.2rem 0.2rem 0.5rem 0.2rem;
+    border: 0.5px solid #9ba3b4;
 }
 
 .hero-section .buttons .try-agent-mode:hover {
-    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-section .small-links a,
+.hero-section .small-links span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.3rem;
+    display: inline-block;
+}
+
+.hero-section .small-links a {
+    color: #4daafc;
+    padding: 2px;
+}
+
+.hero-section .small-links span {
+    color: #9ba3b4;
+}
+
+.hero-section .hover-hidden {
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #9ba3b4;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.hero-section .hover-container:hover .hover-hidden {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-hidden a {
+    color: #c3d0e5;
+}
+
+.hover-hidden span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hero-background img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
