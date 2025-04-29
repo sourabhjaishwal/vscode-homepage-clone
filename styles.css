@@ -7,19 +7,8 @@
     font-family: "Roboto", "Oxygen", "Segoe UI", sans-serif;
 }
 
-:root {
-    --black: #0b0b0b;
-    --navbar-border: rgba(255, 255, 255, 0.122);
-    --vscode-title: #c3d0e5;
-    --links: #9ba3b4;
-    --links-hover: #c3d0e5;
-    --toggle-switch: #3a3a3a;
-    --search-input-background: rgba(255, 255, 255, 0.15);
-    --search-input-background-active: #0078d4;
-}
-
 body {
-    background-color: var(--black);
+    background-color: #0D1117;
     height: 100vh;
 }
 
@@ -34,7 +23,7 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    /* border-bottom: 1px solid var(--navbar-border); */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.122); */
 }
 
 nav {
@@ -53,9 +42,8 @@ nav img {
     margin: 0 8px -3px 0;
 }
 
-
 nav .vscode a {
-    color: var(--vscode-title);
+    color: #c3d0e5;
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -63,7 +51,7 @@ nav .vscode a {
 
 nav a {
     text-decoration: none;
-    color: var(--links);
+    color: #9ba3b4;
     font-weight: 500;
     letter-spacing: 0.2px;
     font-size: 1rem;
@@ -71,7 +59,7 @@ nav a {
 
 nav a:hover {
     cursor: pointer;
-    color: var(--links-hover);
+    color: #c3d0e5;
 }
 
 nav .toggle-switch {
@@ -85,7 +73,7 @@ nav .toggle-switch {
 }
 
 nav .toggle-switch:hover {
-    background-color: var(--toggle-switch);
+    background-color: #3a3a3a;
     cursor: pointer;
 }
 
@@ -100,9 +88,9 @@ nav .toggle-switch img {
 
 nav input {
     font-size: 0.9rem;
-    background-color: var(--black);
-    border: 1px solid var(--search-input-background);
-    color: var(--links);
+    background-color: #0b0b0b;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #9ba3b4;
     padding: 8px 12px;
     border-radius: 4px;
     outline: none;
@@ -111,7 +99,7 @@ nav input {
 }
 
 nav input:focus {
-    border: 1px solid var(--search-input-background-active);
+    border: 1px solid #0078d4;
 }
 
 nav button {
@@ -122,4 +110,58 @@ nav button {
     font-weight: 500;
     border-radius: 4px;
     padding: 6px 18px;
+}
+
+nav button:hover {
+    background-color: #00589b;
+    cursor: pointer;
+}
+
+/* hero-section */
+.hero-section {
+    padding: 4rem;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 span {
+    text-align: center;
+    display: block;
+    color: #c3d0e5;
+    font-size: 4.5rem;
+}
+
+.hero-section .buttons .download {
+    background-color: #0078d4;
+    border-radius: 5px;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    margin: 1.2rem 0.2rem 0.5rem 0.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-section .buttons .download:hover {
+    background-color: #00589b;
+    cursor: pointer;
+}
+
+.hero-section .buttons .try-agent-mode {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border: 0.5px solid #9ba3b4;
+    background-color: #25292E;
+    color: #c3d0e5;
+    font-weight: 500;
+    border-radius: 5px;
+    margin: 1.2rem 0.2rem 0.5rem 0.2rem;
+}
+
+.hero-section .buttons .try-agent-mode:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
 }
