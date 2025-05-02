@@ -20,14 +20,14 @@ header {
     width: 100%;
     height: 9vh;
     display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;
     z-index: 1;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.122); */
+    background-color: #0D1117;
 }
 
 nav {
-    position: fixed;
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -46,7 +46,6 @@ nav .vscode a {
     color: #c3d0e5;
     font-size: 1.25rem;
     font-weight: 500;
-    letter-spacing: 0.5px;
 }
 
 nav a {
@@ -119,8 +118,8 @@ nav button:hover {
 
 /* hero-section */
 .hero-section {
+    margin: 4rem 0;
     padding: 4rem;
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,7 +176,7 @@ nav button:hover {
 
 .hero-section .small-links a,
 .hero-section .small-links span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
     margin-top: 0.3rem;
     display: inline-block;
@@ -197,7 +196,7 @@ nav button:hover {
     visibility: hidden;
     text-align: center;
     padding: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #9ba3b4;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
@@ -216,8 +215,29 @@ nav button:hover {
     cursor: pointer;
 }
 
+.hero-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hero-background img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.hero-background a {
+    color: #9ba3b4;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 2rem;
+    padding: 0.5rem 1.5rem;
+    
+}
+
+.hero-background a:hover {
+    cursor: pointer;
+    border: 2px solid #9ba3b4;
+    border-radius: 5px;
 }
